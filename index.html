@@ -20,7 +20,7 @@
 -->
 <!DOCTYPE HTML>
 <html>
-<title>[LogicaAlternativa.com] Ejemplo de OpenLayer-OpenStreetMap</title></title>
+<title>[LogicaAlternativa.com] Ejemplo de OpenStreetMap-OpenLayers</title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="./js/OpenLayers.js"></script>
 <script src="./js/PosicionarMapa.js"></script>
@@ -48,13 +48,14 @@
 <body onload="javaScript:init()">
 	
 	<div align="center">
-		<p>[<b>LogicaAlternativa.com</b>] Ejemplo de OpenLayer-OpenStreetMap</p>
-		<p>Para más información leé el <a href="http://wwww.logicaalternativa.com/securizacion-de-formulario-de-acceso-con-sha-1">POST</a>. También puedes ver el <a href="https://github.com/logicaalternativa/ejemplosPhp/tree/master/loginsha1/index.php" target="_blank">código</a></p>
+		<p>[<b>LogicaAlternativa.com</b>] Ejemplo de OpenStreetMap-OpenLayers</p>
+		<p>Para más información leé el <a href="http://www.logicaalternativa.com/?p=362">POST</a>. También puedes ver el <a href="https://github.com/logicaalternativa/ejemploOpenLayer" target="_blank">código</a></p>
 	</div>
 	
 
 <div align="center">
 	<div id="demoMap" style="height:350px;width:700px"></div>
+	<br/>
 	<form name="buscarMapa" action="javascript:enviar()">
 	Dirección: <input type="text" name="direccion" placeholder="Escribe una dirección"><input type="submit" value="Encontrar"><input type="button" value="Inicializar" onclick="javaScript:dibujarMapa('demoMap')">
 	</form>
