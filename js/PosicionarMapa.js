@@ -510,8 +510,6 @@ function dibujarMapa( div ) {
 
                 dobleClick: function(e) {
 						 
-						alert(pm_g_map.getZoom());
-						
 						// Se obtiene las coordenadas del pixel marcado 
 						var lonlat = pm_g_map.getLonLatFromPixel(e.xy);                   
 
