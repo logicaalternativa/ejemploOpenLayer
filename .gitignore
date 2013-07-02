@@ -1,2 +1,7 @@
 proxy/java/RemoteSystemsTempFiles
 proxy/java/.metadata/
+proxy/java/openlayers/src/main/webapp/js
+proxy/java/openlayers/src/main/webapp/index.html
+proxy/java/openlayers/.classpath
+proxy/java/openlayers/.project
+proxy/java/.metadata/proxy/java/openlayers/target
