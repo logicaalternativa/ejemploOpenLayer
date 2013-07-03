@@ -113,5 +113,5 @@ proxy/java/openlayers/src/main/java/com/logicaalternativa/ejemplos/openlayers/Pr
 
 y se ha configurado en el web.xml
 
-/home/miguel/Codigo/ejemploOpenLayer/proxy/java/openlayers/src/main/webapp/WEB-INF/web.xml
+proxy/java/openlayers/src/main/webapp/WEB-INF/web.xml
 
