@@ -131,7 +131,7 @@ function dibujarMapa( div ) {
 				failure: this.requestFailure, // Llamada función cuando hay error
 				success: this.requestSuccess, // Llamada cuando todo va bien
 				headers: {"Content-Type": "application/x-www-form-urlencoded"},
-				data: "FreeFormAdress=" + encodeURIComponent( pm_g_cadenaBusqueda ) + "&MaxResponse=1"
+				data: "FreeFormAdress=" + encodeURIComponent( pm_g_cadenaBusqueda ) + "&MaxResponse=25"
 			});
 	}
 	
@@ -151,19 +151,22 @@ function dibujarMapa( div ) {
 		
 		try {
 			var output = format.read(response.responseText);
-			if (output.responseLists[0]) {
+			if (output
+					&& output.responseLists[0]
+						&& output.responseLists[0].features[0] ) {
 				
 				var geometry = output.responseLists[0].features[0].geometry; // Longitud y latitud de la dirección
 				anadirMarcaMenuYCentrar( geometry.x, geometry.y , pm_g_cadenaBusqueda );
 
 			} else {
 				
-				alert("Dirección no encontrada");
+				alert("Dirección no encontrada, por favor se más específico");
 				
 			}
 			
-		}catch(err) {
-			alert("Error indeterminado al añadir la marca");
+		} catch(err) {
+			alert( "Error indeterminado al añadir la marca");
+			console.log( "Error indeterminado al añadir la marca " + error );
 		}
 		
 	}
@@ -445,6 +448,7 @@ function dibujarMapa( div ) {
 	 * */
 	function requestFailure(response) {
 		alert("Error en la comuniación con el servicio OpenLS");
+		console.log( "Error en la comuniación con el servicio OpenLS " + response );
 	}
 	
 	/*
